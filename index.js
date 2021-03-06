@@ -1,32 +1,29 @@
-// Code your solution in this file!
-function returnFirstTwoDrivers (name) {
-  kittens.push(name);
-};
+const returnFirstTwoDrivers = function (drivers) {
+    return drivers.slice(0, 2);
+  };
 
-function destructivelyPrependKitten (name) {
-  kittens.unshift(name);
-};
+  const returnLastTwoDrivers = function (drivers) {
+    return drivers.slice(-2);
+  };
 
-function destructivelyRemoveLastKitten () {
-  kittens.pop();
-};
+  const selectingDrivers = [ returnFirstTwoDrivers, returnLastTwoDrivers ];
 
-function destructivelyRemoveFirstKitten () {
-  kittens.shift();
-};
+  function createFareMultiplier(num){
+      return function (number){
+         return number * num
+      }
+  }
 
-function appendKitten (name) {
-  return [...kittens, name];
-};
+//   const fareDoubler = createFareMultiplier(2)
 
-function prependKitten (name) {
-  return [name, ...kittens];
-};
+  function fareTripler(num){
+    return num * 3
+  }
 
-function removeFirstKitten () {
-  return kittens.slice(1);
-};
+  function fareDoubler(num){
+    return num * 2
+  }
 
-function removeLastKitten () {
-  return kittens.slice(0, kittens.length - 1);
-};
+  function fetchSpecifiedDrivers(array, func){
+    return func(array)
+  }
