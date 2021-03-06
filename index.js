@@ -1,5 +1,5 @@
 // Code your solution in this file!
-function destructivelyAppendKitten (name) {
+function returnFirstTwoDrivers (name) {
   kittens.push(name);
 };
 
