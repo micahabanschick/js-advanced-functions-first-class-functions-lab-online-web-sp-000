@@ -1,29 +1,25 @@
 const returnFirstTwoDrivers = function (drivers) {
-    return drivers.slice(0, 2);
+  return drivers.slice(0, 2);
+};
+
+const returnLastTwoDrivers = function(drivers) {
+  return drivers.slice(-2)
+}
+
+const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers]
+
+
+const createFareMultiplier = function (multi) {
+  // return the function that will multiply a fare for a ride accordingly.
+  return function (int) {
+    return multi * int;
   };
+};
 
-  const returnLastTwoDrivers = function (drivers) {
-    return drivers.slice(-2);
-  };
+const fareDoubler = createFareMultiplier(2)
 
-  const selectingDrivers = [ returnFirstTwoDrivers, returnLastTwoDrivers ];
+const fareTripler = createFareMultiplier(3)
 
-  function createFareMultiplier(num){
-      return function (number){
-         return number * num
-      }
-  }
-
-//   const fareDoubler = createFareMultiplier(2)
-
-  function fareTripler(num){
-    return num * 3
-  }
-
-  function fareDoubler(num){
-    return num * 2
-  }
-
-  function fetchSpecifiedDrivers(array, func){
-    return func(array)
-  }
+const selectDifferentDrivers = function (drivers, selectDrivers) {
+  return selectDrivers(drivers)
+}
